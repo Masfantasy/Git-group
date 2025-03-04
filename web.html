@@ -3,74 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Chuyển Đổi Chức Năng</title>
-    <!--
-        Hello
-    -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background: white;
-            margin: 20px auto;
-            width: 50%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .active {
-            display: block;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 10px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Thông Tin Sản Phẩm</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Chào mừng đến với trang web</h1>
-    <p>Chọn một chức năng:</p>
-    <button onclick="showContent('function1')">Chức năng 1</button>
-    <button onclick="showContent('function2')">Chức năng 2</button>
-    
-    <div id="function1" class="content">
-        <h2>Chức năng 1</h2>
-        <p>Đây là nội dung của chức năng 1.</p>
+    <h1>Danh sách sản phẩm</h1>
+    <div class="product-list">
+        <button onclick="showProduct('product1')">Sản phẩm 1</button>
+        <button onclick="showProduct('product2')">Sản phẩm 2</button>
+        <button onclick="showProduct('product3')">Sản phẩm 3</button>
     </div>
-    
-    <div id="function2" class="content">
-        <h2>Chức năng 2</h2>
-        <p>Đây là nội dung của chức năng 2.</p>
+
+    <div id="product1" class="product-detail">
+        <h2>Sản phẩm 1</h2>
+        <img src="" alt="Sản phẩm 1">
+        <p>Mô tả: Chất lượng cao.</p>
+        <p>Giá: 500,000 VNĐ</p>
     </div>
-    
-    <script>
-        function showContent(id) {
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(content => content.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-    </script>
+
+    <div id="product2" class="product-detail">
+        <h2>Sản phẩm 2</h2>
+        <img src="" alt="Sản phẩm 2">
+        <p>Mô tả: Thiết kế hiện đại.</p>
+        <p>Giá: 750,000 VNĐ</p>
+    </div>
+
+    <div id="product3" class="product-detail">
+        <h2>Sản phẩm 3</h2>
+        <img src="" alt="Sản phẩm 3">
+        <p>Mô tả: Phù hợp cho mọi lứa tuổi.</p>
+        <p>Giá: 1,000,000 VNĐ</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
